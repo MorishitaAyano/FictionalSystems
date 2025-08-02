@@ -100,6 +100,10 @@ function fadeIn() {
   });
 }
 
+$(window).scroll(function () { // スクロールしたら
+  fadeIn(); // 関数を実行
+});
+
 
 
 
