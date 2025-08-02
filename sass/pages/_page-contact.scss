@@ -1,0 +1,94 @@
+@use "../global" as *;
+body.page-contact {
+  .contactform-wrap {
+    &__txt {
+      color: $cBlack;
+      width: 83%;
+      margin: 50px auto 40px;
+      @include mq (sp) {
+        width: 100%;
+      }
+    }
+    .Form {
+      width: 83%;
+      margin: 0 auto;
+      @include mq (sp) {
+        width: 100%;
+      }
+      .Form-Item {
+        &-Label {
+          color: $cBlack;
+          font-weight: bold;
+          font-size: clamp(0.9rem, 0.871rem + 0.14vw, 1rem);
+          margin-bottom: 1.5%;
+          display: flex;
+          align-items: center;
+          &-Required {
+            display: inline-block;
+            background-color: $cRed;
+            border-radius: 5px;
+            color: $cWhite;
+            font-size: 0.7rem;
+            padding: 0 3px;
+            margin-left: 8px;
+          }
+          &.isMsg {
+            margin-bottom: 12px;
+          }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          width: 100%;
+          padding: 1.1%;
+          border: 1px solid $cGray;
+          border-radius: 5px;
+          transition: border-color 0.3s;
+          height: 4rem;
+          margin-bottom: 40px;
+          @include mq (sp) {
+            margin-bottom: 30px;
+          }
+          &:focus {
+            border-color: $cBlack;
+            outline: none;
+          }
+        }
+
+        textarea {
+          height: 15rem;
+          resize: vertical;
+        }
+      }
+
+      .Form-Submit {
+        text-align: center;
+        input[type="submit"] {
+          background: $cNavy;
+          color: $cWhite;
+          border: 2px solid $cNavy;
+          border-radius: 10px;
+          padding: 2% 4%;
+          font-size: clamp(1.1rem, 1.014rem + 0.43vw, 1.4rem);
+          cursor: pointer;
+          transition: 0.3s ease;
+          width: 35%;
+          @include mq (tab) {
+            width: 50%;
+            padding: 2.8% 4%;
+          }
+          @include mq (sp) {
+            width: 80%;
+            padding: 4.5% 4%;
+          }
+          &:hover {
+            background: $cWhite;
+            color: $cBlack;
+          }
+        }
+      }
+    }
+  }
+}

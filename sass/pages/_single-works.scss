@@ -1,0 +1,230 @@
+@use "../global" as *;
+body.single-works {
+  .works {
+    padding: 50px 0 0;
+    &-wrap {
+      &__con {
+        width: 60.48%;
+        margin: 0 auto 40px;
+        @include mq (pc) {
+          width: 85%;
+        }
+        &__ttl {
+          font-size: clamp(1.25rem, 1.071rem + 0.89vw, 1.5rem);
+          display: flex;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          flex-direction: column;
+          gap: 20px;
+          @include padding-bottom;
+          span {
+            font-weight: 400;
+            font-size: clamp(0.875rem, 0.839rem + 0.18vw, 1rem);
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: $cNavy;
+            color: $cWhite;
+            border-radius: 5px;
+          }
+        }
+        &__image {
+          background-image: url("../img/mock.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 100%;
+          aspect-ratio: 87 / 46;
+          position: relative;
+          &__sp {
+            position: absolute;
+            z-index: -1;
+            top: 33%;
+            left: 1%;
+            width: 16.5%;
+            aspect-ratio: 9 / 17;
+          }
+          &__pc {
+            position: absolute;
+            top: 6.2%;
+            right: 8.3%;
+            width: 64.8%;
+            aspect-ratio: 1.554 / 1;
+          }
+        }
+      }
+      &__block {
+        width: 87.5%;
+        margin: 0 auto;
+        padding: 50px 13.54%;
+        background-color: $cBlue;
+        border-radius: 30px;
+        margin-bottom: 40px;
+        color: $cWhite;
+        &.__is-beige {
+          background-color: $cBeige;
+          color: $cBlack;
+        }
+        &:last-of-type {
+          margin-bottom: 50px;
+        }
+        @include mq (pc) {
+          width: 88.1%;
+          padding: 50px 1.6%;
+        }
+        @include mq (tab) {
+          width: 90.9%;
+          padding: 50px 3%;
+        }
+        @include mq (sp) {
+          width: 90%;
+          padding: 50px 2.5%;
+          margin-bottom: 40px;
+        }
+        &__list {
+          li {
+            margin-bottom: 20px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+          dl {
+            display: flex;
+            @include mq (sp) {
+              flex-direction: column;
+              gap: 20px;
+            }
+          }
+
+          dt {
+            max-width: 136px;
+            width: 100%;
+            font-weight: bold;
+            position: relative;
+            @include mq (sp) {
+              padding-left: 1rem;
+            }
+            &::before {
+              content: "";
+              display: block;
+              width: 5px;
+              height: 30px;
+              background-color: $cWhite;
+              border-radius: 100px;
+              position: absolute;
+              top: 50%;
+              right: 0;
+              transform: translateY(-50%);
+              @include mq (sp) {
+                left: 0;
+              }
+            }
+          }
+          dd {
+            width: 100%;
+            margin-left: 1.8rem;
+            @include mq (sp) {
+              margin-left: 0;
+            }
+          }
+        }
+        &__gallery__pc {
+          @include flex;
+          gap: 70px;
+          @include mq(tab) {
+            flex-direction: column;
+            gap: 30px;
+          }
+          &__image {
+            width: 46%;
+            @include mq(tab) {
+              width: 100%;
+            }
+          }
+        }
+        &__gallery__sp {
+          @include flex;
+          gap: 27px;
+          @include mq(tab) {
+            flex-direction: column;
+            gap: 30px;
+          }
+          &__image {
+            width: 31%;
+            @include mq(tab) {
+              max-width: 272px;
+              width: 100%;
+            }
+          }
+        }
+        &__ttl {
+          font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem);
+          margin-bottom: 20px;
+          padding-left: 1rem;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 35px;
+            width: 5px;
+            background-color: $cWhite;
+            border-radius: 100px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
+        }
+        &__txt {
+          margin-bottom: 40px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &__pg {
+        @include flex;
+        flex-wrap: wrap;
+        gap: 1.8rem;
+
+        @include mq(sp) {
+          gap: 1rem;
+        }
+
+        &__item {
+          a {
+            @include flex;
+            height: 3.1rem;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 1px solid $cNavy;
+            color: $cNavy;
+            transition: background-color 0.3s, color 0.3s;
+
+            @include mq (sp) {
+              height: 2.5rem;
+            }
+            &:hover {
+              background-color: $cNavy;
+              color: $cWhite;
+              opacity: 1;
+
+              i {
+                transform: translateX(0);
+              }
+            }
+          }
+          &.__center a {
+            aspect-ratio: 2.89 / 1;
+            border-radius: 999px;
+            background-color: $cNavy;
+            color: $cWhite;
+            &:hover {
+              background-color: $cWhite;
+              color: $cNavy;
+            }
+          }
+        }
+      }
+    }
+  }
+}

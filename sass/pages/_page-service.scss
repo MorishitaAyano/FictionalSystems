@@ -1,0 +1,102 @@
+@use "../global" as *;
+body.page-service {
+  .service-wrap {
+    padding: 50px 0;
+    display: grid;
+    gap: 88px;
+    @include mq (sp) {
+      gap: 54px;
+    }
+    &__block {
+      background-color: $cBlue;
+      border-radius: 30px;
+      width: 87.5%;
+      margin: 0 auto;
+      padding: 50px 13.3%;
+      position: relative;
+      @include mq (sp) {
+        padding: 50px 2.9%;
+      }
+      &.__is-beige {
+        background-color: $cBeige;
+      }
+      &__ttl {
+        font-size: clamp(1.25rem, 0.714rem + 2.68vw, 2rem);
+        line-height: 1;
+        color: $cWhite;
+        -webkit-text-stroke: 8px $cBlue;
+        paint-order: stroke;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+        &.__is-beige {
+          -webkit-text-stroke: 8px $cBeige;
+        }
+        @include flex;
+        gap: 1rem;
+        position: absolute;
+        top: -1.5lh;
+        @include mq (pc) {
+          left: 0;
+        }
+        @include mq (sp) {
+          -webkit-text-stroke: 4px $cBlue;
+          top: -1lh;
+          &.__is-beige {
+            -webkit-text-stroke: 4px $cBeige;
+          }
+        }
+        span {
+          font-size: clamp(3rem, 0.857rem + 10.71vw, 6rem);
+          -webkit-text-stroke: 12px $cBlue;
+          white-space: nowrap;
+          &.__is-beige {
+            -webkit-text-stroke: 12px $cBeige;
+          }
+          @include mq (sp) {
+            -webkit-text-stroke: 6px $cBlue;
+            &.__is-beige {
+              -webkit-text-stroke: 6px $cBeige;
+            }
+          }
+        }
+      }
+      &__con {
+        padding: 30px 0;
+        @include flex;
+        gap: 1.875rem;
+        @include mq (pc) {
+          flex-direction: column;
+        }
+        &__desc {
+          width: 49%;
+          color: $cWhite;
+          @include mq (pc) {
+            width: 100%;
+          }
+          &__image {
+            img {
+              object-fit: contain;
+            }
+          }
+        }
+        &__list {
+          width: 49%;
+          display: grid;
+          gap: 1.25rem;
+          @include mq (pc) {
+            width: 100%;
+          }
+          &__item {
+            background-color: $cWhite;
+            line-height: 2;
+            padding: 0.3rem 0.9rem;
+            border-radius: 5px;
+            @include mq (sp) {
+              padding: 0.3rem 0.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

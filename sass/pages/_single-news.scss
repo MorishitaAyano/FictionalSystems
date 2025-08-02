@@ -1,0 +1,71 @@
+@use "../global" as *;
+body.single-news {
+  .news-wrap {
+    &__meta {
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6.9%;
+      @include padding-bottom;
+      span {
+        display: block;
+        font-size: clamp(0.875rem, 0.839rem + 0.18vw, 1rem);
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: $cNavy;
+        color: $cWhite;
+      }
+    }
+    &__ttl {
+      font-size: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+      @include padding-bottom;
+    }
+    &___txt {
+      line-height: 1.8;
+    }
+    &__pg {
+      @include flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+
+      @include mq(sp) {
+        gap: 1rem;
+      }
+
+      &__item {
+        a {
+          @include flex;
+          height: 3.1rem;
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+          border: 1px solid $cNavy;
+          color: $cNavy;
+          transition: background-color 0.3s, color 0.3s;
+
+          @include mq (sp) {
+            height: 2.5rem;
+          }
+          &:hover {
+            background-color: $cNavy;
+            color: $cWhite;
+            opacity: 1;
+
+            i {
+              transform: translateX(0);
+            }
+          }
+        }
+        &.__center a {
+          aspect-ratio: 2.89 / 1;
+          border-radius: 999px;
+          background-color: $cNavy;
+          color: $cWhite;
+          &:hover {
+            background-color: $cWhite;
+            color: $cNavy;
+          }
+        }
+      }
+    }
+  }
+}

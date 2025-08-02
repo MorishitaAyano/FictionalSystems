@@ -1,0 +1,138 @@
+@use "../global" as *;
+body.common-sub {
+  .top {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 70px);
+
+    @include mq(tab) {
+      height: calc(60vh - 50px);
+    }
+
+    &-wrap {
+      flex: 1;
+      background-image: url("../img/topbg-sub.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      padding: 0 6.25%;
+      &__ttl {
+        line-height: 1.2;
+        padding-top: 9.75vh;
+        span[data-splitting] {
+          display: block;
+          font-size: clamp(0.93rem, 0.701rem + 1.14vw, 1.25rem); // 日本語サイズ
+          letter-spacing: 0.0625rem;
+          color: $cBlack;
+
+          &:last-child {
+            font-size: clamp(2.2rem, 0.914rem + 6.43vw, 4rem); // 英語サイズ
+            color: $cBlue;
+            letter-spacing: 0.1875rem;
+          }
+
+          .char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(10px);
+          }
+
+          .char.animate {
+            animation: waveUp 0.6s ease-out forwards;
+            animation-delay: calc(var(--char-index) * 80ms);
+          }
+        }
+      }
+    }
+    .breadcrumb {
+      padding: 0 6.25%;
+      height: auto;
+
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        height: 12.5vh;
+
+        @include mq(sp) {
+          height: 8.7vh;
+        }
+
+        &:not(:last-child)::after {
+          content: "/";
+          margin: 0 0.5rem;
+        }
+
+        a {
+          display: block;
+          padding: 12% 3%;
+          min-width: max-content;
+          color: $cBlack;
+          text-decoration: none;
+        }
+
+        &[aria-current="page"] {
+          flex: 1;
+          min-width: 0;
+          display: flex;
+          align-items: center;
+          color: rgba($cBlack, 0.5);
+
+          span {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            color: rgba($cBlack, 0.5);
+            font-weight: normal;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
+.category {
+  &-list {
+    width: 87.5%;
+    margin: 0 auto;
+    border-bottom: 3px solid $cLightGray;
+    @include flex(left);
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 2.4% 13.3%;
+    @include mq (tab) {
+      gap: 1.5rem;
+    }
+    @include mq (sp) {
+      width: 90%;
+      padding: 7.5% 2%;
+      gap: 1.25rem;
+    }
+    &__item a {
+      display: block;
+      padding: 5px 10px;
+      background-color: $cWhite;
+      color: $cBlack;
+      border-radius: 5px;
+      border: 2px solid $cNavy;
+      &:hover {
+        background-color: $cNavy;
+        color: $cWhite;
+      }
+
+      &.is-active {
+        background-color: $cNavy;
+        color: $cWhite;
+        pointer-events: none; // 現在ページはクリック不可
+      }
+    }
+  }
+}

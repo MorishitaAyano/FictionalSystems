@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fictional Systems Inc.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+<body class="page-contact common-sub">
+  <header class="header">
+    <div class="header-wrap">
+      <div class="header-wrap__logo">
+        <a href="/">Fictional Systems</a>
+      </div>
+      <nav class="header-wrap__nav">
+        <ul class="header-wrap__nav__list">
+          <li class="header-wrap__nav__list__item">
+            <a href="page-service.html">事業概要</a>
+          </li>
+          <li class="header-wrap__nav__list__item">
+            <a href="page-company.html">会社概要</a>
+          </li>
+          <li class="header-wrap__nav__list__item">
+            <a href="archive-works.html">制作実績</a>
+          </li>
+          <li class="header-wrap__nav__list__item">
+            <a href="archive-news.html">お知らせ</a>
+          </li>
+          <li class="header-wrap__nav__list__item __contact">
+            <a href="page-contact.html">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="openbtn"><span></span><span></span><span></span></div>
+      <nav id="h-menu">
+        <div id="h-menu-list">
+          <ul class="header-wrap__nav__list">
+            <li class="header-wrap__nav__list__item">
+              <a href="page-service.html">事業概要</a>
+            </li>
+            <li class="header-wrap__nav__list__item">
+              <a href="page-company.html">会社概要</a>
+            </li>
+            <li class="header-wrap__nav__list__item">
+              <a href="archive-works.html">制作実績</a>
+            </li>
+            <li class="header-wrap__nav__list__item">
+              <a href="archive-news.html">お知らせ</a>
+            </li>
+            <li class="header-wrap__nav__list__item __contact">
+              <a href="page-contact.html">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="top">
+      <div class="top-wrap">
+        <h1 class="top-wrap__ttl">
+          <span data-splitting>お問い合わせ</span>
+          <span data-splitting>Contact</span>
+        </h1>
+      </div>
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="/">Home</a></li>
+          <li class="breadcrumb__item" aria-current="page">お問い合わせ</li>
+        </ol>
+      </nav>
+    </section>
+    <div class="contactform-wrap __inner">
+      <p class="contactform-wrap__txt">
+        Webサイト制作に関するご相談・ご依頼を受け付けております。新規制作・リニューアル・部分的な改善など、内容が固まっていない段階でもお気軽にお問い合わせください。
+      </p>
+      <div class="Form">
+        <!-- 会社名 -->
+        <div class="Form-Item">
+          <p class="Form-Item-Label">会社名<span class="Form-Item-Label-Required">必須</span></p>
+          <span class="wpcf7-form-control-wrap your-company">
+            <input type="text" name="your-company" class="wpcf7-form-control wpcf7-text" aria-invalid="false" required>
+          </span>
+        </div>
+
+        <!-- 氏名 -->
+        <div class="Form-Item">
+          <p class="Form-Item-Label">
+            氏名<span class="Form-Item-Label-Required">必須</span>
+          </p>
+          <span class="wpcf7-form-control-wrap your-name">
+            <input type="text" name="your-name" class="wpcf7-form-control wpcf7-text" aria-required="true"
+              aria-invalid="false" required>
+          </span>
+        </div>
+
+        <!-- メールアドレス -->
+        <div class="Form-Item">
+          <p class="Form-Item-Label">
+            メールアドレス<span class="Form-Item-Label-Required">必須</span>
+          </p>
+          <span class="wpcf7-form-control-wrap your-email">
+            <input type="email" name="your-email"
+              class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-required="true"
+              aria-invalid="false" required>
+          </span>
+        </div>
+
+        <!-- 電話番号 -->
+        <div class="Form-Item">
+          <p class="Form-Item-Label">電話番号<span class="Form-Item-Label-Required">必須</span></p>
+          <span class="wpcf7-form-control-wrap your-tel">
+            <input type="tel" name="your-tel" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel"
+              aria-invalid="false" required>
+          </span>
+        </div>
+
+        <!-- お問い合わせ内容 -->
+        <div class="Form-Item">
+          <p class="Form-Item-Label isMsg">
+            お問い合わせ内容<span class="Form-Item-Label-Required">必須</span>
+          </p>
+          <span class="wpcf7-form-control-wrap your-message">
+            <textarea name="your-message" class="wpcf7-form-control wpcf7-textarea" cols="40" rows="5"
+              aria-required="true" aria-invalid="false" required></textarea>
+          </span>
+        </div>
+
+        <!-- 送信ボタン -->
+        <div class="Form-Item Form-Submit">
+          <input type="submit" value="送信する" class="wpcf7-form-control wpcf7-submit">
+          <span class="ajax-loader"></span>
+        </div>
+      </div>
+    </div>
+    <section class="contact">
+      <div class="contact-bg">
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-wrap__con">
+          <h2 class="c-ttl">
+            <span data-splitting>お問い合わせ</span>
+            <span data-splitting>Contact</span>
+          </h2>
+          <p class="contact-wrap__con__txt">
+            Webサイト制作に関するご相談・ご依頼を受け付けております。新規制作・リニューアル・部分的な改善など、内容が固まっていない段階でもお気軽にお問い合わせください。
+          </p>
+          <div class="c-btn">
+            <a href="page-contact.html">お問い合わせ
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-wrap__head">
+        <div class="footer-wrap__head__logo">
+          <a href="/">Fictional Systems
+          </a>
+        </div>
+        <div class="footer-wrap__head__backtop">
+          <a href="#">
+            Back to Top<i class="fa-solid fa-circle-chevron-up"></i>
+          </a>
+        </div>
+      </div>
+      <ul class="footer-wrap__list">
+        <li class="footer-wrap__list__item">
+          <a href="page-service.html">事業概要</a>
+          <ul class="footer-wrap__list__sub">
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-service.html#web">－ Webサイト構築</a>
+            </li>
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-service.html#ec">－ ECサイト構築</a>
+            </li>
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-service.html#wordpress">－ WordPressテーマ開発</a>
+            </li>
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-service.html#renewal">－ サイトリニューアル／改善</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-wrap__list__item">
+          <a href="page-company.html">
+            会社概要
+          </a>
+          <ul class="footer-wrap__list__sub">
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-company.html#msg">－ 代表メッセージ</a>
+            </li>
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-company.html#info">－ 会社情報</a>
+            </li>
+            <li class="footer-wrap__list__sub__item">
+              <a href="page-company.html#access">－ アクセス</a>
+            </li>
+          </ul>
+        </li>
+        <li class="footer-wrap__list__item __block">
+          <a href="archive-works.html">制作実績</a>
+          <a href="archive-news.html">お知らせ</a>
+          <a href="page-contact.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </div>
+    <p class="footer-right">© Fictional Systems Inc. All Rights Reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+@use "../setting" as *;
+@use './breakpoint' as *;
+
+@mixin flex($justify: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin padding-bottom {
+  padding-bottom: 4.6%;
+  @include mq (pc) {
+    padding-bottom: 6.2%
+  }
+  @include mq (sp) {
+    padding-bottom: 11%
+  }
+}
